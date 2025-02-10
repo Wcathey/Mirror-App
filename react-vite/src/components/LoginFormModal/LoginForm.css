@@ -1,0 +1,58 @@
+
+.login-modal-container {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+#login-title {
+    font-size: 3rem;
+    color: white;
+    cursor: default;
+
+}
+
+#login-form label {
+    font-size: 20px;
+    color: rgb(252, 54, 202);
+
+
+}
+
+#login-form input {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    outline-color: white;
+    transition: outline-color 0.3s ease;
+    text-align: center;
+    font-size: 16px;
+
+
+
+}
+
+#login-form button {
+    padding: 5px;
+    width: 100%;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    background-color: rgb(252, 54, 202);
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+#login-btns-wrapper {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+}

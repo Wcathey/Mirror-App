@@ -1,0 +1,9 @@
+.contact-page-container {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.contact-page-container h1 {
+    font-size: 3rem;
+    color: rgb(255, 0, 170);
+}

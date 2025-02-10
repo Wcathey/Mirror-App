@@ -1,0 +1,116 @@
+.profile-dropdown {
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+
+
+}
+
+#user-logged-in {
+  display: grid;
+  grid-template-rows: 15% 10% 1fr;
+  align-items: end;
+  padding: 5px;
+
+}
+#user-logged-in p,
+#user-logged-in a {
+  transition: color 0.3s ease;
+  font-weight: 600;
+  ;
+}
+
+#user-logged-in a:hover {
+color:  rgb(252, 54, 202);
+transition: color 0.3s ease
+
+}
+
+
+#user-logged-in span {
+  color: rgb(255, 0, 212);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#log-out-btn {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 30px;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#log-out-btn:hover {
+  background-color: rgb(253, 31, 194);
+  transition: background-color 0.3s ease;
+}
+
+.user-cred-options li {
+  cursor: pointer;
+}
+
+
+.user-cred-options li:hover {
+  color: rgb(252, 54, 202);
+  transition: color 0.3s ease;
+}
+
+
+
+.nav-container ul{
+list-style: none;
+display: flex;
+justify-content: space-around;
+height: 100%;
+
+}
+
+.nav-container li,
+.nav-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-container a:hover {
+  color: rgb(252, 54, 202);
+  transition: color 0.3s ease;
+}
+
+
+.nav-container {
+  width: 100%;
+  background-color: #000000;
+  padding-bottom: 10px;
+
+
+
+
+}
+
+#menu-dropdown {
+  font-size: 6vh;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  cursor: pointer;
+  color: white;
+  transition: color .3s ease-in-out;
+
+}
+
+#menu-dropdown:hover {
+  color: rgb(252, 54, 202);
+  transition: color .3s ease-in-out;
+}

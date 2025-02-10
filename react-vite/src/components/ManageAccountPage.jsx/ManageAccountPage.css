@@ -1,0 +1,313 @@
+.manage-account-container,
+.upgrade-form-container{
+background-color: black;
+height: 100vh;
+padding: 1rem;
+
+}
+
+
+
+.upgrade-form-container {
+    text-align: center;
+}
+
+
+
+#manage-headline,
+#upgrade-headline{
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(132, 132, 151), 0 0 0.2em rgb(255, 0, 191);
+
+}
+
+.upgrade-form-container h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(255, 0, 170);
+}
+
+.upgrade-form-container p {
+    font-size: 18px;
+    font-weight: 500;
+
+
+}
+
+.upgrade-form-container input {
+    width: 100%;
+    height: 80%;
+
+
+}
+
+.upgrade-form-container label {
+    font-size: 18px;
+}
+
+.manage-account-container h3
+{
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(255, 0, 170);
+
+
+}
+
+.manage-account-container span {
+    color: white;
+}
+
+
+
+.edit-user-cred-wrapper {
+display: grid;
+gap: 1rem;
+
+margin-bottom: 1rem;
+margin-top: 1rem;
+
+}
+
+.edit-password-wrapper {
+font-weight: 500;
+}
+
+.no-access p {
+    color: white;
+}
+
+.manage-btn,
+#account-sub-btns li,
+.account-settings-wrapper li {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    transition: color 0.3s ease
+}
+
+#upgrade-btn {
+    border:none;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 3rem;
+    width: 40%;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px 0px rgb(255, 0, 234);
+    font-weight: 600;
+    color: black;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#upgrade-btn:hover
+ {
+    background-color: rgb(255, 0, 170);
+    transition: background-color 0.3s ease;
+
+
+
+
+}
+
+.manage-btn:hover,
+#account-sub-btns li:hover,
+.account-settings-wrapper li:hover {
+    color: rgb(252, 54, 202);
+    transition: color 0.3s ease
+}
+
+
+#change-password-form {
+    display: grid;
+}
+
+.account-settings-wrapper {
+    display: grid;
+    gap: 1rem;
+
+    margin-top: 1rem;
+}
+
+#account-sub-btns {
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cancel-subscription-container,
+.delete-account-container {
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+}
+
+.cancel-subscription-container button,
+.delete-account-container button {
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 5px;
+
+}
+
+#verified-wrapper {
+    border-bottom: 1px solid white;
+}
+
+#verify-delete {
+    display: grid;
+    gap: 1rem;
+}
+#verify-delete input {
+    padding: 5px;
+}
+#verify-delete label {
+    font-size: 18px;
+}
+
+#delete-confirmation-btns {
+    display: grid;
+}
+
+.cancel-subscription-container button:hover,
+.delete-account-container button:hover
+{
+    color: rgb(255, 0, 170);
+    transition: color 0.3s ease;
+}
+
+.cancel-subscription-container p,
+.delete-account-container p {
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cancel-subscription-container h1,
+.delete-account-container h1
+ {
+   color: rgb(255, 0, 170);
+   font-size: 2rem;
+   margin-bottom: 1rem;
+
+}
+
+.confirmation-container {
+   text-align: center;
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: slidein 1s ease-in-out;
+    z-index: 1;
+  }
+
+.change-password-container {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+
+
+}
+
+#change-password-form {
+    display: grid;
+    gap: 1rem;
+    font-size: 20px;
+    box-shadow: 0px 100px 100px 0px grey;
+    padding: 2rem;
+    margin-top: 15%;
+    border-radius: 100%;
+    border-top: 2px solid grey;
+
+}
+
+.change-password-container input
+ {
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 50px;
+    outline-color: rgb(255, 0, 170);
+    outline-width: 1px;
+    outline-style: dashed;
+    text-align: center;
+    border: 3px solid rgb(255, 0, 170);
+
+}
+
+.change-password-container button {
+    width: 20%;
+    margin: 0 auto;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: black;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    color: rgb(255, 0, 170);
+}
+
+.change-password-container button:hover {
+    background-color:rgb(29, 29, 29);
+    transition: background-color 0.5s ease-in-out;
+
+}
+
+#change-password-form h1 {
+    color: rgb(255, 0, 170);
+}
+
+.confirmation-container h1
+ {
+    font-size: 3rem;
+    color: rgb(233, 92, 233);
+}
+
+.confirmation-container h2 {
+    color: rgb(255, 255, 255);
+}
+
+.confirmation-container a {
+    font-size: 3rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    animation: color-change ease-in-out 10s infinite;
+}
+
+@keyframes color-change {
+    50% { color: rgb(225, 0, 255); }
+    25% { color: rgb(255, 255, 255); }
+    25% {color: rgb(255, 0, 149);}
+
+  }
+
+  @keyframes slidein {
+    0% {
+      top: -1900px;
+    }
+    100% {
+      top: 40vh;
+    }
+  }

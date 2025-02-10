@@ -1,0 +1,22 @@
+
+.about-page-container {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+
+
+}
+
+.about-wrapper {
+    display: grid;
+    text-align: center;
+    color: white;
+    gap: 1rem;
+}
+
+.about-wrapper h1 {
+    font-size: 3rem;
+    color: rgb(255, 0, 170);
+}
