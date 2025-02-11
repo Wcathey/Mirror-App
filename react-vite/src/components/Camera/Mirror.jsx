@@ -52,7 +52,7 @@ function Mirror() {
 
     }
 
-    
+
     return (
 
         <div className="deepar-container">
@@ -74,8 +74,7 @@ function Mirror() {
                 </div>
                 <div id="ar-options">
                     <div className="effect-option">
-                        <label>Skin</label>
-                        <select name="skin" id="skin-options" onChange={(e) => {
+                    <select name="skin" id="skin-options" onChange={(e) => {
                             e.stopPropagation()
                             changeEffect(e.target.value)
                         }}>
@@ -83,10 +82,11 @@ function Mirror() {
                             <option value="foundation">Foundation</option>
                             <option value="blush">Blush</option>
                         </select>
+                        <label>Skin</label>
+
                     </div>
                     <div className="effect-option">
-                        <label>Eyes</label>
-                        <select name="eye" id="eye-options" onChange={(e) => {
+                    <select name="eye" id="eye-options" onChange={(e) => {
                             e.stopPropagation()
                             changeEffect(e.target.value)
                         }}>
@@ -95,29 +95,32 @@ function Mirror() {
                             <option value="eyeliner">Eye Liner</option>
                             <option value="mascara">Mascara</option>
                         </select>
+                        <label>Eyes</label>
+
                     </div>
                     <div className="effect-option">
-                        <label>Lips</label>
-
-                        <select name="lips" id="lip-options" onChange={(e) => {
+                    <select name="lips" id="lip-options" onChange={(e) => {
                             e.stopPropagation()
                             changeEffect(e.target.value)
                         }}>
                             <option value=""></option>
                             <option value="lipstick">Lipstick</option>
+                            <option value="gloss">Lip Gloss</option>
+
                         </select>
+                        <label>Lips</label>
                     </div>
                     <div className="effect-option">
-                        <label>Add Ons</label>
-                        <select name="add-on" id="add-on-options" onChange={(e) => {
+                    <select name="add-on" id="add-on-options" onChange={(e) => {
                             e.stopPropagation()
                             changeEffect(e.target.value)
                         }}>
                             <option value=""></option>
                             <option value="eyelashes">Eyelashes</option>
                             <option value="glitter">Glitter</option>
-                            <option value="gloss">Lip Gloss</option>
                         </select>
+                        <label>Add Ons</label>
+
                     </div>
                 </div>
             </div>

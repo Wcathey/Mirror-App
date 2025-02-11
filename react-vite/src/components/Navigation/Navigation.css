@@ -131,6 +131,8 @@ height: 100%;
   .nav-container ul {
     display: grid;
     text-align: center;
+    
+
   }
 
   .nav-container li,
@@ -150,12 +152,21 @@ height: 100%;
 
 
 
+
   }
 
   .user-cred-options {
     display: flex;
     gap: 10rem;
     padding: 10px;
+
+
+
+
+  }
+  #user-logged-in {
+    display: grid;
+    grid-template-rows: 3fr;
 
 
 

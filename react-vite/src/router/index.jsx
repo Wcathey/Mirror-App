@@ -7,10 +7,10 @@ import HomePage from '../components/HomePage';
 import AboutPage from '../components/AboutPage';
 import HowItWorksPage from '../components/HowItWorksPage';
 import ContactPage from '../components/ContactPage';
-import ManageAccountPage from '../components/ManageAccountPage.jsx';
-import UpgradeFormPage from '../components/ManageAccountPage.jsx/UpgradeFormPage.jsx';
-import ConfirmationPage from '../components/ManageAccountPage.jsx/ConfirmationPage.jsx';
-import ChangePasswordForm from '../components/ManageAccountPage.jsx/ChangePasswordForm.jsx';
+import ManageAccountPage from '../components/ManageAccountPage'
+import UpgradeFormPage from '../components/ManageAccountPage/UpgradeFormPage.jsx';
+import ConfirmationPage from '../components/ManageAccountPage/ConfirmationPage.jsx';
+import ChangePasswordForm from '../components/ManageAccountPage/ChangePasswordForm.jsx';
 export const router = createBrowserRouter([
   {
     element: <Layout />,

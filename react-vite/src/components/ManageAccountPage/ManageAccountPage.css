@@ -87,7 +87,7 @@ font-weight: 500;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    color: white;
+    color: rgb(255, 0, 170);
     text-decoration: none;
     background-color: black;
     border: none;
@@ -130,11 +130,14 @@ font-weight: 500;
 #change-password-form {
     display: grid;
 }
+#change-password-form a {
+    text-decoration: none;
+    color: white;
+}
 
 .account-settings-wrapper {
     display: grid;
     gap: 1rem;
-
     margin-top: 1rem;
 }
 
@@ -221,7 +224,7 @@ font-weight: 500;
 
 .change-password-container {
     text-align: center;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 
 
@@ -231,10 +234,10 @@ font-weight: 500;
     display: grid;
     gap: 1rem;
     font-size: 20px;
-    box-shadow: 0px 100px 100px 0px grey;
+    box-shadow: 0px 0px 100px 0px grey;
     padding: 2rem;
-    margin-top: 15%;
-    border-radius: 100%;
+    margin: 10% auto;
+
     border-top: 2px solid grey;
 
 }
@@ -311,3 +314,46 @@ font-weight: 500;
       top: 40vh;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .change-password-container {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+
+
+    }
+
+    #change-password-form {
+        display: grid;
+        gap: 1rem;
+        font-size: 18px;
+        box-shadow: none;
+        padding: 2rem;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+
+    }
+
+    .change-password-container input
+     {
+        width: 100%;
+
+
+        outline-width: 1px;
+        outline-style: none;
+        text-align: center;
+        border: 3px solid rgb(255, 0, 170);
+
+    }
+
+    .change-password-container button {
+        width: 100%;
+        margin: 2% auto;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 18px;
+
+    }
+}

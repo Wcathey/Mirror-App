@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useState } from "react"
 import { changePassword } from "../../redux/session";
-
+import { NavLink } from "react-router-dom";
 function ChangePasswordForm() {
     const dispatch = useDispatch();
     const [currentPassword, setCurrentPassword] = useState("");
@@ -62,8 +62,10 @@ function ChangePasswordForm() {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
-
                 <button type="submit">Submit</button>
+                <NavLink to="/manage-account/current">Cancel</NavLink>
+
+
             </form>
         </div>
     )

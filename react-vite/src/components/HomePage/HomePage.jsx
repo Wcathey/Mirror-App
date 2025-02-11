@@ -17,7 +17,9 @@ function HomePage() {
 
         const closeMenu = (e) => {
             if (divRef.current && !divRef.current.contains(e.target)) {
+
                 setShowMenu(false);
+
             }
         };
         document.addEventListener("click", closeMenu);
@@ -105,11 +107,7 @@ function HomePage() {
                         <p>Join the growing community of empowered individuals using Mirror to embrace their beauty. Discover how self-expression can transform your confidence and mental well-being.</p>
 
                     <div id="plan-cta" ref={divRef}>
-                            <OpenModalMenuItem
-                                itemText="Start Your Journey"
-                                onItemClick={closeMenu}
-                                modalComponent={<SignupFormModal />}
-                            />
+                          <NavLink to="/signup">Start Your Journey</NavLink>
                         </div>
                         </div>
             </div>

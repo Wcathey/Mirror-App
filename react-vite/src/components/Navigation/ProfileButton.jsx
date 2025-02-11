@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef} from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { CiMenuBurger } from "react-icons/ci";
 import { thunkLogout } from "../../redux/session";
 import OpenModalMenuItem from "./OpenModalMenuItem";
@@ -9,6 +10,9 @@ import { NavLink } from "react-router-dom";
 
 
 function ProfileButton() {
+  const location = useLocation();
+  const isSignUpPage = location.pathname === '/signup';
+
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   const user = useSelector((store) => store.session.user);
@@ -65,16 +69,15 @@ function ProfileButton() {
           ) : (
 
             <div className="user-cred-options">
+
               <OpenModalMenuItem
                 itemText="Log In"
                 onItemClick={closeMenu}
                 modalComponent={<LoginFormModal />}
               />
-              <OpenModalMenuItem
-                itemText="Sign Up"
-                onItemClick={closeMenu}
-                modalComponent={<SignupFormModal />}
-              />
+              {!isSignUpPage &&
+              <NavLink to="/signup">Signup</NavLink>
+              }
             </div>
           )}
         </ul>

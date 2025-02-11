@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 768px) {
 #modal-content {
-  top: 0;
+  top: 4rem;
 
 }
 
@@ -40,7 +40,5 @@
 
 }
 
-#modal-background {
 
-}
 }
