@@ -6,14 +6,13 @@
  font-family: Poppins, Arial, Helvetica, sans-serif;
  box-sizing: border-box;
 
+
 }
 
 body {
     background-color: black;
     display: block;
     overflow: scroll;
-    touch-action: manipulation;
-    -webkit-overflow-scrolling: touch;
     color: white;
     line-height: 1.6;
 
@@ -27,6 +26,6 @@ li {
 
     body {
         display: inline;
-       
+
     }
 }
