@@ -20,3 +20,10 @@
     font-size: 3rem;
     color: rgb(255, 0, 170);
 }
+
+@media screen and (max-width: 768px) {
+   .about-page-container {
+    margin: 10% auto;
+   }
+
+}

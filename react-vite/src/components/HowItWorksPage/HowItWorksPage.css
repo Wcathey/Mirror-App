@@ -12,3 +12,10 @@
 .hiw-container p {
     padding: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+    .hiw-container {
+        margin: 10% auto;
+    }
+
+}

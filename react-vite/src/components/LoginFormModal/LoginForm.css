@@ -56,3 +56,9 @@
     gap: 1rem;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+.login-modal-container {
+    width: 100%;
+}
+}

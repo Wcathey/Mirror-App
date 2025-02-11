@@ -52,6 +52,7 @@ function ProfileButton() {
 
           {user ? (
             <div id="user-logged-in">
+
               <li><p>Username:</p> <span>{user.username}</span></li>
               <li><p>Email:</p>  <span>{user.email}</span></li>
               <li>

@@ -78,9 +78,10 @@ height: 100%;
 .nav-container a {
   color: white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   margin-top: 1rem;
   transition: all 0.3s ease;
+
 }
 
 .nav-container a:hover {
@@ -93,6 +94,9 @@ height: 100%;
   width: 100%;
   background-color: #000000;
   padding-bottom: 10px;
+  border-bottom: 4px solid rgb(255, 3, 255);
+
+
 
 
 
@@ -113,4 +117,48 @@ height: 100%;
 #menu-dropdown:hover {
   color: rgb(252, 54, 202);
   transition: color .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+
+  }
+
+  .nav-container ul {
+    display: grid;
+    text-align: center;
+  }
+
+  .nav-container li,
+  .nav-container a{
+    font-size: 20px;
+  }
+
+  #menu-dropdown {
+
+
+
+  }
+  .profile-dropdown {
+    position: static;
+    width: 100%;
+
+
+
+
+  }
+
+  .user-cred-options {
+    display: flex;
+    gap: 10rem;
+    padding: 10px;
+
+
+
+
+  }
 }

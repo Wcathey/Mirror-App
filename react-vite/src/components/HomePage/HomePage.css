@@ -139,7 +139,7 @@
 
 }
 
-#guide-video-container {
+.guide-video-container {
     display: grid;
     gap: 3rem;
     width: 100%;
@@ -148,7 +148,7 @@
 
 }
 
-#guide-video-container iframe {
+.guide-video-container iframe {
     margin: 0 auto;
 }
 
@@ -208,6 +208,161 @@
     padding: 1rem;
     text-shadow: 1px 1px 2px rgb(241, 90, 229), 0 0 1em rgb(132, 132, 151), 0 0 0.2em rgb(255, 0, 191);
 
+
+
+}
+
+@media screen and (max-width: 768px) {
+.hp-container {
+    display: inline;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#hp-cta {
+   width: 100%;
+   padding: 10px;
+}
+
+
+#hp-title h1
+ {
+    font-size: 8rem;
+}
+
+#cta-lower-text {
+    display: grid;
+    width: 100%;
+
+
+}
+
+#hp-cta a {
+    border: 3px solid black;
+    border-radius: 50px;
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+
+
+}
+
+#hp-headline,
+#hp-subheadline {
+    margin-left: 0;
+
+}
+
+#hp-headline {
+    font-size: 2rem;
+}
+
+.problem-container,
+.guide-container,
+.achieve-container,
+.avoid-fail-container
+ {
+    display: inline;
+    box-shadow: none;
+}
+
+#problem-text-wrapper,
+#guide-text-wrapper,
+#plan-text-wrapper,
+#achieve-text-wrapper {
+    border-top: 10px solid rgb(255, 3, 255);
+
+}
+
+#problem-text-wrapper h1,
+#guide-text-wrapper h1,
+#plan-text-wrapper h1,
+#achieve-text-wrapper h1
+
+ {
+    font-size: 2rem;
+    padding: 0;
+
+}
+
+#guide-text-wrapper h2,
+#plan-text-wrapper h2
+
+ {
+    font-size: 2rem;
+
+
+}
+
+#problem-text-wrapper p,
+#guide-text-wrapper p,
+#plan-text-wrapper p,
+#achieve-text-wrapper p
+
+ {
+    padding: 10px;
+    font-size: 20px;
+}
+
+#collage-image {
+    width: 100%;
+    padding: 10px;
+
+}
+
+.guide-video-container,
+.achieve-container  {
+display: inline;
+
+
+
+
+}
+
+.guide-video-container iframe {
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+.plan-container {
+display: inline;
+
+
+}
+
+#plan-text-wrapper h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+#plan-text-wrapper h2
+{
+    font-size: 2em;
+    font-weight: 500;
+
+}
+
+#plan-text-wrapper p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#af-text-wrapper h1{
+    font-size: 3rem;
+}
+
+#af-text-wrapper {
+    padding-bottom: 1rem;
+
+}
+
+#plan-cta {
+    width: 95%;
+
+
+}
 
 
 }

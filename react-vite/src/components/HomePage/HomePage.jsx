@@ -73,8 +73,8 @@ function HomePage() {
                     <h2>Your Personalized Beauty Assistant</h2>
                     <p>Mirror uses advanced facial scanning, AI, and AR to provide tailored recommendations for accessories, colors, and makeup that complement your natural features. We’re here to help you look and feel like your most authentic self.</p>
                 </div>
-                <div id="guide-video-container">
-                    <iframe width="700" height="500" src="https://www.youtube.com/embed/mmLq9C5Di44?si=_9L2RkyMpMhVrA2Z" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen="allow"></iframe>1``
+                <div className="guide-video-container">
+                    <iframe width="700" height="500" src="https://www.youtube.com/embed/mmLq9C5Di44?si=_9L2RkyMpMhVrA2Z" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen="allow"></iframe>
                 </div>
             </div>
 
@@ -83,9 +83,9 @@ function HomePage() {
 
                         <h1>Don’t Let Outdated Beauty Standards Hold You Back</h1>
                         <p>Feeling like you have to fit a mold can take a toll on your confidence. Mirror is here to remind you that your uniqueness is your strength.</p>
+                    </div>
+                    <div className="guide-video-container">
                         <iframe width="700" height="500" src="https://www.youtube.com/embed/CaDb2VL3IXM?si=bMKuB7yCXbxDT-6A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen="allow"></iframe>
-
-
                     </div>
 
                 </div>

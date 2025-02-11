@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { initializeDeepAr, reloadDeepAr } from "../../redux/deepar";
 import OpenModalButton from "../OpenModalButton/OpenModalButton";
@@ -55,6 +56,9 @@ function Mirror() {
     return (
 
         <div className="deepar-container">
+            <div id="home-nav">
+                <NavLink to="/">Return Home</NavLink>
+            </div>
 
             <div id="screen-container">
                 <div id="ar-screen" ref={deepARElement}>
