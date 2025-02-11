@@ -39,7 +39,7 @@ function Mirror() {
         await deepAr.clearEffect()
         }
         else {
-            await deepAr.switchEffect(`/src/DeepArSDK/effects/${effect}.deepar`)
+            await deepAr.switchEffect(`/deepar-resources/effects/${effect}.deepar`)
 -``
         }
     }
@@ -52,7 +52,7 @@ function Mirror() {
 
     }
 
-    console.log(deepAr)
+    
     return (
 
         <div className="deepar-container">

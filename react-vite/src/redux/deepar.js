@@ -13,9 +13,12 @@ const startDeepar = (data) => ({
 
 
 export const initializeDeepAr = (element) => async (dispatch) => {
+    console.log("Deepar version: " + deepar.version);
+
     const deepAR = await deepar.initialize({
         licenseKey: "6daf2a9316acad2ec9d67358133c702c4aaccee2716170e43792704dddf7909fabdac8fe911dc529",
-        previewElement: element
+        previewElement: element,
+        rootPath: '/deepar-resources'
 
     });
         dispatch(startDeepar(deepAR));
