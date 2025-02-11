@@ -11,6 +11,7 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
     padding-bottom: 1rem;
+    position: relative;
 
 
 }
@@ -112,10 +113,33 @@ transition: outline-color 0.3s ease
     cursor: pointer;
 }
 
+#close-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: grid;
+    font-size: 2rem;
+
+
+}
+
+
 @media screen and (max-width: 768px) {
     .signup-modal-container {
         width: 100%;
-        
+        height: 100%;
+        position: static;
     }
 
+    #close-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        display: grid;
+        font-size: 1rem;
+
+
+    }
 }

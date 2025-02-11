@@ -3,6 +3,7 @@ import { useDispatch, useSelector} from "react-redux";
 import { useModal } from "../../context/Modal";
 import { thunkSignup } from "../../redux/session";
 import { getSubscriptionByTier } from "../../redux/subscription";
+
 import "./SignupForm.css";
 
 function SignupFormModal() {
@@ -62,6 +63,12 @@ function SignupFormModal() {
 
     <div className="signup-modal-container">
       <h1 id="signup-title">Sign Up</h1>
+      <div id="close-text">
+       <p onClick={(e) => {
+        e.preventDefault()
+        closeModal()
+       }}>close</p>
+      </div>
       {errors.server && <p>{errors.server}</p>}
       <form id="signup-form" onSubmit={handleSubmit}>
         <label>

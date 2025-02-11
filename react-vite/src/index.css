@@ -13,6 +13,8 @@ body {
     background-color: black;
     display: block;
     overflow: scroll;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
     color: white;
     line-height: 1.6;
 

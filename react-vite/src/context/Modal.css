@@ -31,8 +31,8 @@
 
 @media screen and (max-width: 768px) {
 #modal-content {
-  top: 10rem;
-  
+  top: 0;
+
 }
 
 #modal {

@@ -57,8 +57,30 @@
     width: 100%;
 }
 
+#close-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: grid;
+    font-size: 2rem;
+
+
+}
+
 @media screen and (max-width: 768px) {
 .login-modal-container {
     width: 100%;
+}
+
+#close-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: grid;
+    font-size: 1rem;
+
+
 }
 }

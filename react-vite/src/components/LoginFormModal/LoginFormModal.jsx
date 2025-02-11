@@ -40,6 +40,12 @@ function LoginFormModal() {
 
     <div className="login-modal-container">
       <h1 id="login-title">Log In</h1>
+      <div id="close-text">
+       <p onClick={(e) => {
+        e.preventDefault()
+        closeModal()
+       }}>close</p>
+      </div>
       <form id="login-form" onSubmit={handleSubmit}>
         <label>
           Email
