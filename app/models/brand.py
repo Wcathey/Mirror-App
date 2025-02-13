@@ -10,11 +10,11 @@ class Brand(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
-    category_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('categories.id')), nullable=False)
     created_at = db.Column(db.DateTime, default=func.now())
     updated_at = db.Column(db.DateTime, default=func.now(), onupdate=func.now())
-    foundations = relationship("Foundation", back_populates="brand", cascade="all, delete-orphan")
     category = relationship("Category", back_populates="brands")
+    foundations = relationship("Foundation", back_populates="brand", cascade="all, delete-orphan")
+
     def to_dict(self):
         return {
             'id': self.id,

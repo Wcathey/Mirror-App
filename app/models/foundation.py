@@ -10,7 +10,7 @@ class Foundation(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
-    hex_color_code = db.Column(db.String, nullable=False)
+    hex_color_code = db.Column(db.String(6), nullable=False)
     shade_id = db.Column(db.Integer, nullable=False)
     brand_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('brands.id')), nullable=False)
     created_at = db.Column(db.DateTime, default=func.now())
