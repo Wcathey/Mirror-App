@@ -20,7 +20,7 @@ def seed_foundations():
     classic_ivory = Foundation(
         id=7, name='Classic Ivory', hex_color_code="E5BB93", shade_id=120, brand_id=1)
     creamy_beige = Foundation(
-        id=8, name='Creamy Beige', hex_color_code="#F0BF9E", shade_id=122, brand_id=1)
+        id=8, name='Creamy Beige', hex_color_code="F0BF9E", shade_id=122, brand_id=1)
     soft_sand = Foundation(
         id=9, name='Soft Sand', hex_color_code="F4BF93", shade_id=124, brand_id=1)
     nude_beige = Foundation(
@@ -36,7 +36,7 @@ def seed_foundations():
     soft_tan = Foundation(
         id=15, name='Soft Tan', hex_color_code="D5985F", shade_id=228, brand_id=1)
     natural_buff = Foundation(
-        id=16, name='Natural Buff', hex_color_code="#DBA372", shade_id=230, brand_id=1)
+        id=16, name='Natural Buff', hex_color_code="DBA372", shade_id=230, brand_id=1)
     pure_beige = Foundation(
         id=17, name='Pure Beige', hex_color_code="DB9F7A", shade_id=235, brand_id=1)
     rich_tan = Foundation(
@@ -52,7 +52,7 @@ def seed_foundations():
     natural_tan = Foundation(
         id=23, name='Natural Tan', hex_color_code="D7966E", shade_id=320, brand_id=1)
     warm_honey = Foundation(
-        id=24, name='Warm Honey', hex_color_code="#D8925F", shade_id=322, brand_id=1)
+        id=24, name='Warm Honey', hex_color_code="D8925F", shade_id=322, brand_id=1)
     toffee = Foundation(
         id=25, name='Toffee', hex_color_code="D2864C", shade_id=330, brand_id=1)
     golden_caramel = Foundation(
@@ -68,7 +68,7 @@ def seed_foundations():
     coconut = Foundation(
         id=31, name='Coconut', hex_color_code="BC6C47", shade_id=355, brand_id=1)
     warm_coconut = Foundation(
-        id=32, name='Warm Coconut', hex_color_code="#B1612C", shade_id=356, brand_id=1)
+        id=32, name='Warm Coconut', hex_color_code="B1612C", shade_id=356, brand_id=1)
     latte = Foundation(
         id=33, name='Latte', hex_color_code="9F5F3B", shade_id=358, brand_id=1)
     mocha = Foundation(
@@ -84,7 +84,7 @@ def seed_foundations():
     java = Foundation(
         id=39, name='Java', hex_color_code="6A3405", shade_id=375, brand_id=1)
     espresso = Foundation(
-        id=40, name='Espresso', hex_color_code="#5E3225", shade_id=380, brand_id=1)
+        id=40, name='Espresso', hex_color_code="5E3225", shade_id=380, brand_id=1)
 
 # Now you can add the data into your session:
     db.session.add(fair_porcelain)
