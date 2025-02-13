@@ -15,7 +15,7 @@ class Foundation(db.Model):
     brand_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('brands.id')), nullable=False)
     created_at = db.Column(db.DateTime, default=func.now())
     updated_at = db.Column(db.DateTime, default=func.now(), onupdate=func.now())
-    brand = relationship("Brand", back_populates="foundation")
+    brand = relationship("Brand", back_populates="foundations")
 
     def to_dict(self):
         return {
