@@ -12,7 +12,6 @@ class Brand(db.Model):
     name = db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, default=func.now())
     updated_at = db.Column(db.DateTime, default=func.now(), onupdate=func.now())
-    category = relationship("Category", back_populates="brands")
     foundations = relationship("Foundation", back_populates="brand", cascade="all, delete-orphan")
 
     def to_dict(self):
