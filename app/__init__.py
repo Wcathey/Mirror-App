@@ -9,6 +9,8 @@ from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.verification_2FA_routes import verification_2FA_routes
 from .api.subscription_routes import subscription_routes
+from .api.brand_routes import brand_routes
+from .api.foundation_routes import foundation_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -33,6 +35,8 @@ app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(subscription_routes, url_prefix='/api/subscriptions')
 app.register_blueprint(verification_2FA_routes, url_prefix='/api/verification_2FA')
+app.register_blueprint(brand_routes, url_prefix='/api/brands')
+app.register_blueprint(foundation_routes, url_prefix='/api/foundations')
 db.init_app(app)
 Migrate(app, db)
 

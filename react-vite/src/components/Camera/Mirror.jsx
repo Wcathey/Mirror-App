@@ -2,11 +2,7 @@ import { useEffect, useRef } from "react"
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { initializeDeepAr, reloadDeepAr } from "../../redux/deepar";
-import OpenModalButton from "../OpenModalButton/OpenModalButton";
-import MediaModal from "../MediaModal";
-import { FaCamera } from "react-icons/fa";
-
-
+import Carousel from "../Carousel";
 import './Mirror.css';
 
 function Mirror() {
@@ -17,6 +13,7 @@ function Mirror() {
 
     //deep ar can only initialize once, on redirect will track state and shut down to reinitialize
     useEffect(() => {
+
         if (deepARElement.current) {
             if (deepAr) {
                 dispatch(reloadDeepAr(deepAr)).then(
@@ -29,20 +26,14 @@ function Mirror() {
         }
 
 
-    }, [])
+    }, []);
+
+
 
 
     //loads an effect using switchEffect method taking in the target value
     //*Important: all values must match file path to function properly else 404
-    const changeEffect = async (effect) => {
-        if(effect === "") {
-        await deepAr.clearEffect()
-        }
-        else {
-            await deepAr.switchEffect(`/deepar-resources/effects/${effect}.deepar`)
--``
-        }
-    }
+
     // takes screenshot and returns a data url
     const captureImage = async () => {
         const imageData= await deepAr.takeScreenshot();
@@ -51,6 +42,7 @@ function Mirror() {
 
 
     }
+
 
 
     return (
@@ -62,69 +54,11 @@ function Mirror() {
 
             <div id="screen-container">
                 <div id="ar-screen" ref={deepARElement}>
-                    <div className="ar-btn-wrapper">
-                        <OpenModalButton
-                        modalComponent={<MediaModal/>}
-                        onButtonClick={captureImage}
-                        buttonText={<FaCamera />}
-
-                        />
-                    </div>
+                <Carousel/>
 
                 </div>
-                <div id="ar-options">
-                    <div className="effect-option">
-                    <select name="skin" id="skin-options" onChange={(e) => {
-                            e.stopPropagation()
-                            changeEffect(e.target.value)
-                        }}>
-                            <option value=""></option>
-                            <option value="foundation">Foundation</option>
-                            <option value="blush">Blush</option>
-                        </select>
-                        <label>Skin</label>
 
-                    </div>
-                    <div className="effect-option">
-                    <select name="eye" id="eye-options" onChange={(e) => {
-                            e.stopPropagation()
-                            changeEffect(e.target.value)
-                        }}>
-                            <option value=""></option>
-                            <option value="eyeshadow">Eye Shadow</option>
-                            <option value="eyeliner">Eye Liner</option>
-                            <option value="mascara">Mascara</option>
-                        </select>
-                        <label>Eyes</label>
-
-                    </div>
-                    <div className="effect-option">
-                    <select name="lips" id="lip-options" onChange={(e) => {
-                            e.stopPropagation()
-                            changeEffect(e.target.value)
-                        }}>
-                            <option value=""></option>
-                            <option value="lipstick">Lipstick</option>
-                            <option value="gloss">Lip Gloss</option>
-
-                        </select>
-                        <label>Lips</label>
-                    </div>
-                    <div className="effect-option">
-                    <select name="add-on" id="add-on-options" onChange={(e) => {
-                            e.stopPropagation()
-                            changeEffect(e.target.value)
-                        }}>
-                            <option value=""></option>
-                            <option value="eyelashes">Eyelashes</option>
-                            <option value="glitter">Glitter</option>
-                        </select>
-                        <label>Add Ons</label>
-
-                    </div>
-                </div>
-            </div>
-
+             </div>
         </div>
     )
 }
