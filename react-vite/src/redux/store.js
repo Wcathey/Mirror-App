@@ -11,6 +11,9 @@ import subscriptionReducer from "./subscription";
 import verificationReducer from "./verification";
 import foundationReducer from "./foundation";
 import brandReducer from "./brand";
+import collectionReducer from "./collection";
+import eyeshadowReducer from "./eyeshadow";
+import lipstickReducer from "./lipstick";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -18,7 +21,10 @@ const rootReducer = combineReducers({
   subscription: subscriptionReducer,
   verification: verificationReducer,
   foundation: foundationReducer,
-  brand: brandReducer
+  lipstick: lipstickReducer,
+  eyeshadow: eyeshadowReducer,
+  brand: brandReducer,
+  collection: collectionReducer
 });
 
 let enhancer;

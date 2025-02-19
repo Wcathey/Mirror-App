@@ -16,6 +16,9 @@ right: 0;
 padding: 10px;
 width: 100%;
 z-index: 1;
+display: flex;
+align-items: center;
+justify-content: space-between;
 
 
 
@@ -37,7 +40,6 @@ z-index: 1;
     display: flex;
     align-items: center;
     background-color: black;
-    border-top: 4px solid rgb(255, 3, 255);
 
 }
 
@@ -76,6 +78,38 @@ z-index: 1;
     left: 0;
     margin: 0 auto;
 
+}
+
+#effect-dropdown {
+    font-size: 5rem;
+    color: white;
+}
+
+.effect-carousel {
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 270px;
+    height: 100vh;
+    transition: all 0.4s ease;
+
+}
+
+.effect-side-container {
+   text-align: center;
+
+}
+
+#effect-header {
+    font-size: 1.25rem;
+
+}
+#effect-header h1 {
+    font-weight: 200;
+    color: rgb(255, 194, 250);
 }
 
 @media screen and (max-width: 768px) {

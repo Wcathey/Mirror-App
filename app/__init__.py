@@ -11,6 +11,9 @@ from .api.verification_2FA_routes import verification_2FA_routes
 from .api.subscription_routes import subscription_routes
 from .api.brand_routes import brand_routes
 from .api.foundation_routes import foundation_routes
+from .api.collection_routes import collection_routes
+from .api.eyeshadow_routes import eyeshadow_routes
+from .api.lipstick_routes import lipstick_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -37,6 +40,9 @@ app.register_blueprint(subscription_routes, url_prefix='/api/subscriptions')
 app.register_blueprint(verification_2FA_routes, url_prefix='/api/verification_2FA')
 app.register_blueprint(brand_routes, url_prefix='/api/brands')
 app.register_blueprint(foundation_routes, url_prefix='/api/foundations')
+app.register_blueprint(collection_routes, url_prefix='/api/collections')
+app.register_blueprint(lipstick_routes, url_prefix='/api/lipsticks')
+app.register_blueprint(eyeshadow_routes, url_prefix='/api/eyeshadows')
 db.init_app(app)
 Migrate(app, db)
 

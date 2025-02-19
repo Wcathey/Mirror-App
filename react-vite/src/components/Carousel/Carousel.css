@@ -18,16 +18,7 @@
     margin: 0 auto;
 
 }
-.carousel-item h1 {
-    font-size: 4rem;
-    font-weight: 200;
-    color: rgb(255, 0, 234);
-    cursor: default;
 
-
-
-
-}
 
 .carousel-list {
     width: 100%;
@@ -62,7 +53,7 @@
 
 
 #hidden {
-    display: none;
+
 }
 
 #clear-shade-btn {

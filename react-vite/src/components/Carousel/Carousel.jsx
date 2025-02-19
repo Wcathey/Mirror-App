@@ -2,7 +2,12 @@ import { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { getAllBrands } from "../../redux/brand";
 import { getAllFoundations } from "../../redux/foundation";
-import './Carousel.css';
+import { getAllCollections } from "../../redux/collection";
+import { getAllEyeshadows } from "../../redux/eyeshadow";
+import { getAllLipsticks } from "../../redux/lipstick";
+import { CiStar } from "react-icons/ci";
+
+import './Carousel-redo.css';
 
 
 function Carousel() {
@@ -12,29 +17,31 @@ function Carousel() {
     const [brand, setBrand] = useState('');
     const [collection, setCollection] = useState('');
     const [shade, setShade] = useState('');
-    const [showFilter, setShowFilter] = useState('');
-    const [showMakeUp, setShowMakeUp] = useState('');
-    const [showBrand, setShowBrand] = useState('');
-    const [showCollection, setShowCollection] = useState('')
     const [showClearButton, setShowClearButton] = useState('hidden')
     const [clearCurrentEffect, setClearCurrentEffect] = useState(false);
     const availableBrands = useSelector(state => state.brand.brands);
     const availableFoundations = useSelector(state => state.foundation.foundations);
+    const availableEyeshadows = useSelector(state => state.eyeshadow.eyeshadows);
+    const availableLipsticks = useSelector(state => state.lipstick.lipsticks);
+    const availableCollections = useSelector(state => state.collection.collections);
     const deepAr = useSelector((store) => store.deepar.Sdk)
     const filterOptionsData = ['Skin', 'Eyes', 'Lips', 'Accessories'];
 
     useEffect(() => {
         dispatch(getAllFoundations())
+        dispatch(getAllCollections())
+        dispatch(getAllEyeshadows())
+        dispatch(getAllLipsticks())
         dispatch(getAllBrands())
     }, [dispatch]);
 
-    useEffect(()=> {
-        if(shade) {
+    useEffect(() => {
+        if (shade) {
             changeEffect()
 
         }
 
-        if(clearCurrentEffect) {
+        if (clearCurrentEffect) {
             changeEffect()
         }
     }, [shade])
@@ -48,7 +55,6 @@ function Carousel() {
         setBrand('');
         setCollection('');
         setShade('');
-        setShowFilter('hidden');
 
 
 
@@ -61,7 +67,6 @@ function Carousel() {
         setBrand('')
         setCollection('');
         setShade('');
-        setShowMakeUp('hidden');
 
 
     }
@@ -72,7 +77,6 @@ function Carousel() {
         setBrand(selectedBrand);
         setCollection('');
         setShade('');
-        setShowBrand('hidden');
 
 
     }
@@ -82,74 +86,99 @@ function Carousel() {
         const selectedCollection = e.target.innerText;
         setCollection(selectedCollection);
         setShade('');
-        setShowCollection('hidden');
     }
 
     const handleShadeChange = (e) => {
         e.stopPropagation();
+        let startingShade;
         const selectedShade = e.target.innerText;
-        const slicedShade = selectedShade.slice(0, selectedShade.indexOf("#"))
-        const fileFormat = slicedShade.toLowerCase().replace(/\s+/g, '-');
+        if (makeupType === 'Foundation') {
+            startingShade = selectedShade.slice(0, selectedShade.indexOf("#"))
+        }
+        else {
+            startingShade = selectedShade;
+
+        }
+        const fileFormat = startingShade.toLowerCase().replace(/\s+/g, '-');
+
         setShade(fileFormat)
         setShowClearButton('clear-shade-btn');
 
     }
 
     const changeEffect = async () => {
-        if(!shade) {
+        if (!shade) {
             await deepAr.clearEffect()
             setShowClearButton('hidden');
             setClearCurrentEffect(false);
-            }
-            else {
-        await deepAr.switchEffect(`/deepar-resources/effects/${filterOption}/${makeupType}/${brand}/${collection}/${shade}.deepar`)
-            }
+        }
+        else {
+            await deepAr.switchEffect(`/deepar-resources/effects/${filterOption}/${makeupType}/${brand}/${collection}/${shade}.deepar`)
+        }
     }
 
 
 
-    const carouselStyle = {
-        display: 'flex',
-        transition: 'transform 0.3s ease-in-out',
-        width: '100%',
 
-    }
 
 
 
     return (
         <div className="carousel-container">
-            <div className="carousel" style={carouselStyle}>
+
+            <div className="carousel">
+
+
                 {/*Filter Option Carousel */}
-                <div className="carousel-item" id={showFilter}>
-                    <h1>Filters</h1>
+                <div className="carousel-item">
+                    <div className="carousel-header">
+                        <h2>Category</h2>
+                        <div id="star-icon"><CiStar />
+                        </div>
+                    </div>
                     <div className="carousel-list">
-                    {filterOptionsData.map((filterLabel) => (
-                        <p onClick={handleFilterChange}>{filterLabel}</p>
-                    ))}
+                        {filterOptionsData.map((filterLabel) => (
+                            <p onClick={handleFilterChange}>{filterLabel}</p>
+                        ))}
                     </div>
 
                 </div>
                 {/*Makeup Type Carousel*/}
                 {filterOption && (
-                    <div className="carousel-item" id={showMakeUp}>
-                        <h1>Makeup</h1>
+                    <div className="carousel-item" >
+                        <div className="carousel-header">
+                            <h2>Makeup</h2>
+                            <div id="star-icon"><CiStar />
+                            </div>
+                        </div>
                         <div className="carousel-list">
-                        <p onClick={handleMakeupChange}>Foundation</p>
-
+                            {filterOption === 'Skin' &&
+                                <p onClick={handleMakeupChange}>Foundation</p>
+                            }
+                            {filterOption === 'Lips' &&
+                                <p onClick={handleMakeupChange}>Lipstick</p>
+                            }
+                            {filterOption === 'Eyes' &&
+                                <p onClick={handleMakeupChange}>Eyeshadow</p>
+                            }
                         </div>
                     </div>
                 )}
                 {/*Brand Carousel*/}
                 {makeupType && (
-                    <div className="carousel-item" id={showBrand}>
-                        <h1>Brand</h1>
+                    <div className="carousel-item">
+                        <div className="carousel-header">
+                            <h2>Brand</h2>
+                            <div id="star-icon"><CiStar />
+                            </div>
+                        </div>
                         <div className="carousel-list">
-                        {availableBrands.map((brandOption) => (
-                            <p key={brandOption.id} value={brandOption.name} onClick={handleBrandChange}>
-                                {brandOption.name}
-                            </p>
-                        ))}
+                            {availableBrands.map((brandOption) => (
+                                <p key={brandOption.id} value={brandOption.name} onClick={handleBrandChange}>
+
+                                    {brandOption.name}
+                                </p>
+                            ))}
                         </div>
 
 
@@ -157,10 +186,18 @@ function Carousel() {
                 )}
                 {/*Collection Carousel*/}
                 {brand && (
-                    <div className="carousel-item" id={showCollection}>
-                        <h1>Collection</h1>
-                        <div className="carousel-list">
-                        <p onClick={handleCollectionChange}>Fit Me</p>
+                    <div className="carousel-item">
+                        <div className="carousel-header">
+                            <h2>Collection</h2>
+                            <div id="star-icon"><CiStar />
+                            </div>
+                        </div>                        <div className="carousel-list">
+                            {availableCollections.map((collectionOption) => (
+                                <p key={collectionOption.id} value={collectionOption.name} onClick={handleCollectionChange}>
+
+                                    {collectionOption.name}
+                                </p>
+                            ))}
 
                         </div>
                     </div>
@@ -168,18 +205,34 @@ function Carousel() {
                 {/*Shade Carousel*/}
                 {collection && (
                     <div className="carousel-item">
-                    <button id={showClearButton} onClick={(e) => {
-                        e.preventDefault();
-                        setShade('')
-                        setClearCurrentEffect(true);
-                    }}>clear effect</button>
+                        <button id={showClearButton} onClick={(e) => {
+                            e.preventDefault();
+                            setShade('')
+                            setClearCurrentEffect(true);
+                        }}>clear effect</button>
 
-                        <h1>Shade</h1>
+                        <div className="carousel-header">
+                            <h2>Shade</h2>
+                            <div id="star-icon"><CiStar />
+                            </div>
+                        </div>
                         <div className="carousel-list">
+                            {makeupType === 'Foundation' &&
+                                availableFoundations.map((shadeOption) => (
+                                    <p onClick={handleShadeChange}>{shadeOption.name}<span>#{shadeOption.shade_id}</span></p>
+                                ))}
+                            {makeupType === 'Eyeshadow' &&
+                                availableEyeshadows.map((shadeOption) => (
+                                    <p onClick={handleShadeChange}>{shadeOption.name}</p>
 
-                            {availableFoundations.map((shadeOption) => (
-                                <p onClick={handleShadeChange}>{shadeOption.name}<span>#{shadeOption.shade_id}</span></p>
-                            ))}
+                                ))}
+                            {makeupType === 'Lipstick' &&
+                                availableLipsticks.map((shadeOption) => (
+                                    <p onClick={handleShadeChange}>{shadeOption.name}</p>
+
+                                ))}
+
+
                         </div>
                     </div>
                 )}
