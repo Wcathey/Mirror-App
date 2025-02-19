@@ -122,4 +122,18 @@ justify-content: space-between;
 
     }
 
+    #effect-dropdown {
+        font-size: 3rem;
+    }
+
+    #effect-header {
+        font-size: 1rem;
+        margin-top: 1rem;
+
+    }
+
+    .effect-carousel {
+        width: fit-content;
+        background: transparent;
+    }
 }

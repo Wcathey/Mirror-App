@@ -13,14 +13,9 @@ display: grid;
 gap: 2rem;
 margin-top: 9rem;
 
-
-
-
 };
 
-.carousel-item {
 
-}
 
 .carousel-header{
 display: flex;
@@ -78,4 +73,22 @@ color: pink;
 
 #hidden {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+.carousel-list p {
+    font-size: 20px;
+}
+.carousel-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.carousel-item h2 {
+    padding: 5px;
+    font-size: 1.5rem;
+    color: rgb(252, 54, 202);
+    border-bottom: 1px solid white;
+    width: 70%;
+}
 }
